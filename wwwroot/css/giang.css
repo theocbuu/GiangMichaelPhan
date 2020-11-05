@@ -6,44 +6,41 @@
     border-color: red; 
   }
 
-/* first row after main nav 
-_______________________________*/
-.first-row{
-  background-color: black;
-  margin-top: 100px; /*I got 57px from web inspector of main nav*/
-}
-
-/* first-div
-------------------------------- */
-
-
-
-
 /* make main nav fixed on scroll 
 _________________________________*/
-/* .navbar{
+.navbar{
   width: 100%;
   position: fixed;
   z-index: 1;
   top:0;
-} */
+} 
 
+/* first row after main nav 
+_______________________________*/
+.first-row{
+  background-color: black;
+  margin-top: 57px; /*I got 57px from web inspector of main nav*/
+  /* position: absolute; */
+}
 
 
 
 /* sidenav on homepage - first div
 _______________________________*/
-.sidenav{
-  height: 100vh; /* Full-height of a window screen: remove this if you want "auto" height */
+/* this side-nav can be reuse on any page,
+but remember to set margin of the main div as side-nav width */
+.side-nav{
+  height: auto; /* Full-height of a window screen: remove this if you want "auto" height */
   /* width: 15%; Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
+  z-index: 1; /*Stay on top*/
   left: 0;
-  background-color: #111;
+  background-color:#bd5d38;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 5vh; /*30% of the screen height*/
 }
-.sidenav a {
+
+.side-nav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
