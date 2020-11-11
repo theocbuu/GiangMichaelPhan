@@ -15,23 +15,18 @@ _________________________________*/
   top:0;
 } 
 
-/* first row after main nav 
+/* sidenav on homepage
+this div is independent from the body
+and can be reused on any other pages
 _______________________________*/
-.first-row{
-  background-color: black;
-  margin-top: 57px; /*I got 57px from web inspector of main nav*/
-  /* position: absolute; */
-}
-
-
-
-/* sidenav on homepage - first div
-_______________________________*/
-/* this side-nav can be reuse on any page,
-but remember to set margin of the main div as side-nav width */
 .side-nav{
-  height: auto; /* Full-height of a window screen: remove this if you want "auto" height */
-  /* width: 15%; Set the width of the sidebar */
+  /* display: flex; /*display: flex => help align-item: center*/
+  /* align-items: center; */
+  height: auto; /* auto expand base on the below setting */
+  bottom:0; /*bottom 0 touch the very end of the window/browser pass the footer*/
+  top:0; /* top:0 make the div touch the very top of the window/browser pass the nav*/
+  margin-top: 57px; /*help the div to margin down right at the nav height*/
+  margin-bottom: 60px; /* same here with footer height*/
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /*Stay on top*/
   left: 0;
@@ -44,11 +39,33 @@ but remember to set margin of the main div as side-nav width */
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;  /*#818181; */
   display: block;
 }
-.sidenav a:hover {
-  color: #f1f1f1;
+.side-nav a:hover {
+  background-color: #dca189;
+}
+.side-nav a:active{ /* when click */
+  background-color: #894429;
+}
+
+.inside-side-bar{
+  height:auto;  
+}
+
+/*
+Need to do:
+display a menu box when click with show the side-nav and hidden after click again
+*/
+@media (max-width:575.98px){
+  .side-nav{
+    display: none;
+  }
+  /* .side-nav a:not(:first-child) {display: none;}
+  .side-nav a.icon{
+    float: right;
+    display: block;
+  } */
 }
 
 /* second div column
@@ -64,6 +81,16 @@ but remember to set margin of the main div as side-nav width */
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+/* first row after main nav 
+_______________________________*/
+.first-row{
+  background-color: black;
+  margin-top: 57px; /*I got 57px from web inspector of main nav*/
+  /* position: absolute; */
+}
+
 
 
 /* css for section
