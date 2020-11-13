@@ -57,16 +57,20 @@ _______________________________*/
 Need to do:
 display a menu box when click with show the side-nav and hidden after click again
 */
-#dropdown-bt-1{
+#menu-div-bt1{
   display: none;
+  text-align: center;
+  /* margin-top: 57px; */
+  
 }
 @media (max-width:575.98px){
   .side-nav{
     display: none;
   }
-  #dropdown-bt-1{
+
+  #menu-div-bt1{
     display: block;
-    
+    margin-top: 57px; /* height of top nav */
   }
 
   /* .side-nav a:not(:first-child) {display: none;}
